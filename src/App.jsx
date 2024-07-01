@@ -1,16 +1,15 @@
-// import InvoiceDashboard from "./pages/InvoiceDashboard";
-
-import SolitaireBoard from "./components/Solitaire";
-import CustomDragLayer from "./components/Solitaire/CustomDragLayer";
-
-// import GamingDashboard from "./pages/GamingDashboard";
+import { Route, Routes } from "react-router-dom";
+import InvoiceOverview from "./pages/InvoiceOverview";
+import InvoiceDashboard from "./pages/InvoiceDashboard";
 
 export default function App() {
   return (
     <div className="w-full">
       {/* <GamingDashboard /> */}
-      <SolitaireBoard />
-      <CustomDragLayer />
+      <Routes>
+        <Route path="/" element={<InvoiceOverview />} />
+        <Route path="/dashboard" element={<InvoiceDashboard />} />
+      </Routes>
     </div>
   );
 }

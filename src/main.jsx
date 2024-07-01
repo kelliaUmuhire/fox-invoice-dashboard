@@ -4,11 +4,14 @@ import App from "./App.jsx";
 import { DndProvider } from "react-dnd";
 import { HTML5Backend } from "react-dnd-html5-backend";
 import "./index.css";
+import { BrowserRouter } from "react-router-dom";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <DndProvider backend={HTML5Backend}>
-      <App />
-    </DndProvider>
+    <BrowserRouter>
+      <DndProvider backend={HTML5Backend}>
+        <App />
+      </DndProvider>
+    </BrowserRouter>
   </React.StrictMode>
 );

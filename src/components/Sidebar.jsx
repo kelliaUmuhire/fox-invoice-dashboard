@@ -1,3 +1,5 @@
+import { NavLink } from "react-router-dom";
+
 /* eslint-disable react/prop-types */
 export default function Sidebar({ hideSidebar }) {
   return (
@@ -12,19 +14,25 @@ export default function Sidebar({ hideSidebar }) {
       <div className="border-t-2 border-t-gray-200 w-full py-10 px-3">
         <div className="text-gray-500 text-sm px-3 mb-6">MAIN MENU</div>
         <div className="flex flex-col gap-3 w-full">
-          <div className="flex w-full text-black items-center gap-3 p-3 bg-violet-300 text-sm font-bold rounded-xl shadow-main shadow-black">
+          <NavLink
+            to="/"
+            className={({ isActive }) => (isActive ? "active-link" : "link")}
+          >
             <img src="/images/overview.svg" alt="Overview" className="w-6" />
             <span className="">Overview</span>
-          </div>
-          <div className="flex w-full text-gray-500 items-center gap-3 p-3">
+          </NavLink>
+          <NavLink
+            to="/dashboard"
+            className={({ isActive }) => (isActive ? "active-link" : "link")}
+          >
             <img src="/images/dashboard.svg" alt="Dashboard" className="w-6" />
             <span className="text-sm">Dashboard</span>
-          </div>
-          <div className="flex w-full text-gray-500 items-center gap-3 p-3">
+          </NavLink>
+          <div className="link">
             <img src="/images/stats.svg" alt="Dashboard" className="w-6" />
             <span className="text-sm">Statistics</span>
           </div>
-          <div className="flex w-full text-gray-500 items-center gap-3 p-3">
+          <div className="link">
             <img
               src="/images/transaction.svg"
               alt="Dashboard"
@@ -32,11 +40,11 @@ export default function Sidebar({ hideSidebar }) {
             />
             <span className="text-sm">Transaction</span>
           </div>
-          <div className="flex w-full text-gray-500 items-center gap-3 p-3">
+          <div className="link">
             <img src="/images/product.svg" alt="Dashboard" className="w-6" />
             <span className="text-sm">Product</span>
           </div>
-          <div className="flex w-full text-gray-500 items-center gap-3 p-3">
+          <div className="link">
             <img src="/images/schedule.svg" alt="Dashboard" className="w-6" />
             <span className="text-sm">Schedule</span>
           </div>
@@ -44,11 +52,11 @@ export default function Sidebar({ hideSidebar }) {
       </div>
       <div className="border-t-2 border-t-gray-200 w-full py-10 px-3 lg:pb-10 pb-20">
         <div className="text-gray-500 text-sm px-3 mb-6">HELP & SUPPORT</div>
-        <div className="flex w-full text-gray-500 items-center gap-3 p-3">
+        <div className="link">
           <img src="/images/help.svg" alt="Dashboard" className="w-6" />
           <span className="text-sm">Help & Center</span>
         </div>
-        <div className="flex w-full text-gray-500 items-center gap-3 p-3">
+        <div className="link">
           <img src="/images/settings.svg" alt="Settings" className="w-6" />
           <span className="text-sm">Settings</span>
         </div>
