@@ -1,6 +1,6 @@
+/* eslint-disable react/prop-types */
 import { NavLink } from "react-router-dom";
 
-/* eslint-disable react/prop-types */
 export default function Sidebar({ hideSidebar }) {
   return (
     <div className="lg:w-[18%] md:w-1/2 w-4/5 lg:relative fixed top-0 bottom-0 min-h-screen overflow-auto z-20 bg-white border-r-2 border-r-gray-200 flex flex-col items-center py-2">
@@ -61,6 +61,13 @@ export default function Sidebar({ hideSidebar }) {
           <span className="text-sm">Settings</span>
         </div>
       </div>
+      <a
+        href="https://www.figma.com/design/Qp35xA34CJItMB43Zh9vEi/Fox-Invoice---Dashboard-Design-for-Invoice-(Community)"
+        target="_blank"
+        className="text-gray-500 text-sm absolute bottom-6 text-center underline"
+      >
+        Figma Design
+      </a>
     </div>
   );
 }

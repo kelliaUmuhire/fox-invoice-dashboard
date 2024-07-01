@@ -30,7 +30,6 @@ export default function InvoiceOverview() {
               color={"bg-indigo-200"}
               percentage={"20%"}
               rise
-              skew
             />
           </div>
           <ActivityChart />
